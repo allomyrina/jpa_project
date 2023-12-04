@@ -1,0 +1,11 @@
+
+<th:block>
+    <form th:if="${session.member == null}" action="/login">
+    <button type="submit">로그인</button>
+    </form>
+</th:block>
+<form th:if="${session.member != null}" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="memberId" th:value="${session.member.memberId}">
+    <input type="file" name="file" multiple><br>
+    <button type="submit">업로드</button>
+</form>

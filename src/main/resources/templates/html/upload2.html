@@ -1,0 +1,6 @@
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="memberId" th:value="${session.member.memberId}">
+    <input type="file" name="file"><br>
+    비밀글여부 : <input type="checkbox" name="secretFlag" value="0">
+    <button type="submit">업로드</button>
+</form>

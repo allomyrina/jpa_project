@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        아이디 : [[${user.userId}]]<br>
+        사용자 : [[${user.userName}]]<br>
+        나 이  : [[${user.userAge}]]
+        <hr>
+        아이디 : <li th:text="${user.userId}"></li>
+        이름 : <li th:text="${user.userName}"></li>
+        나이 : <li th:text="${user.userAge}"></li>
+        <hr>
+        아이디 : <span th:text="${user.userId}" style="color:brown"></span><br>
+        이름 : <span data-th-text="${user.userName}"></span><br>
+        나이 : <span data-th-text="${user.userAge}"></span>
+
+    </body>
+</html>

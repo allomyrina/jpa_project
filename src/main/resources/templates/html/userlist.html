@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>순번</th>
+            <th>이름</th>
+        </tr>
+        <tr th:each="i : ${userList}">
+            <td th:text="${i.seq}"></td>
+            <td th:text="${i.user}"></td>
+        </tr>
+    </table>
+    <table>
+        <tr th:each="data : ${#numbers.sequence(1,10)}">
+            <td>1</td>
+        </tr>
+    </table>
+    <table>
+        <tr th:each="number : ${#numbers.sequence(1,9)}">
+            <td th:text="${number}"></td>
+            <td th:text="${number}"></td>
+            <td th:text="${number}"></td>
+        </tr>
+    </table>
+  </body>
+</body>
+</html>

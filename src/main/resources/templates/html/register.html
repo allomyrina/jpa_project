@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>    
+        <form action="/register" method="post">
+            아이디 : <input type="text" name="memberId" 
+            th:placeholder="${session.member.memberId} +'외에 다른 아이디사용' " ><br>
+            비밀번호 : <input type="password" name="memberPw" 
+            th:value="${session.member.memberPw}"><br>
+            이름 : <input type="text" name="memberName" 
+            th:value="${session.member.memberName}"><br>
+            <input type="submit" value="회원가입">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<th:block th:if="${session.member} == null">
+    <form action="/login">
+        <button type="submit">로그인</button>
+    </form>
+</th:block>
+<th:block th:if="${session.member} != null">
+    <form action="/logout">
+        <button type="submit">로그아웃</button>
+    </form>
+</th:block>
+
+<p th:if="${session.member} != null" th:text="${session.member.memberName} + '님 반갑습니다'">
+</p>
+<p th:unless="${session.member} != null">로그인되어 있지 않습니다</p>
+<th:block th:if="${session.member} != null">
+    <form action="/upload4">
+        <button type="submit">파일업로드</button>
+    </form>
+</th:block>

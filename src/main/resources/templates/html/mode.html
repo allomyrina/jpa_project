@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <p th:if="${mode} != null " th:text="${mode.user}"></p>
+        <p th:unless="${mode} != null">조회된 데이터가 없습니다</p>
+        <span th:if="${mode} != null" th:switch="${mode.seq}">
+            <span th:case="1">A</span>
+            <span th:case="2">B</span>
+            <span th:case="3">C</span>
+        </span>
+        <span th:unless="${mode} != null">X</span>
+    </body>
+</html>
+<!DOCTYPE html>
